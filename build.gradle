@@ -1,0 +1,40 @@
+group 'science.wasabi'
+version '1.0-SNAPSHOT'
+
+//--- from https://spring.io/guides/gs/accessing-data-jpa/
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+// ^ creates the Über-Jar and flags main class.
+
+
+jar {
+    baseName = 'sarh-helpo'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    // JPA Data (We are going to use Repositories, Entities, Hibernate, etc...)
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    // Hibernate database
+    compile group: 'com.h2database', name: 'h2', version: '1.4.196'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
