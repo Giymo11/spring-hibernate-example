@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="science.wasabi.example.spring.controller.CustomerController"
+          alignment="center" hgap="10" vgap="10">
+
+    <Button text="Show Customer" onAction="#showGreeting"/>
+    <Label GridPane.rowIndex="1" fx:id="greeting"/>
+
+</GridPane>

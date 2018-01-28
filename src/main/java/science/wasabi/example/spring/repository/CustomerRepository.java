@@ -1,11 +1,12 @@
-package science.wasabi.sarah_testo.repository;
+package science.wasabi.example.spring.repository;
 
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import science.wasabi.sarah_testo.entity.Customer;
+import science.wasabi.example.spring.entity.Customer;
+
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
